@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module"> // import 할떄는 타입을 꼭 모듈로 설정해주기
+        //import hello,{a,b} from './b.js' ; 
+        // console.log(hello)
+        // a,b는 이름이 일치해야 받을 수 있고, hi는 이름을 바꿔도 받을 수 있음
+
+        import {a as value} from './b.js' ;  // a에 해당하는 값을 뭐로 부를지 as 뒤에 이름을 적어주기
+        console.log(value)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        //import vlaueBox from './a.js' ; 
+        //-> valueBox라는 이름은 아무거나 상관없음 / js 파일에서 b를 내보내면 여기에 a라고 써있어도 b 값을 내보냄.
+        //console.log(vlaueBox)
+
+        import {a,b,hi} from './a.js' ; //여러개를 내보낼때는 받는 파일에 해당 이름이 꼭 일치해야함.
+        console.log(hi)
+        console.log(a)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

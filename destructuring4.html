@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product = {shape:{width:150,height:100,weight:50,},color:['red','green','yellow']}
+        
+       // console.log(product.shape.width)
+
+        let {shape:{width,height,weight,},color:[topColor,bottomColor,sideColor]} = product
+        // 키값과 value 값이 같아서 생략해줌 -> width:width, height:height, weight:weight
+
+        console.log('width'+width) // 이렇게 적으면 이름을 찾아가서 매칭됨
+        console.log('height'+height)
+        console.log('weight'+weight)
+        console.log(topColor)
+        console.log(bottomColor)
+        console.log(sideColor)
+        
+    </script>
+</body>
+</html>

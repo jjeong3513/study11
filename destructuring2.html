@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const {age : b, name : a} = {name:'lee',age:30} // a='lee' , b= 30 이라는 값이 할당된 것
+        const {age,name} = {name:'lee',age:30} // 위에 있는 것을 축약한 것
+        console.log(age)
+        console.log(name)
+        // 배열은 순서대로 값을 가짐.
+        // 오브젝트 안에 있는 자료들은 순서와 싱관없이 이름에 맞는 값을 찾음. 그래서 이름이 꼭 일치해야함.
+        // 축약하는 것을 잘 기억해두기
+
+        const address = 'seoul';
+        const telNum = '010';
+        const gender = 'male';
+
+        const user = {
+            address:address,
+            telNum : telNum,
+            gender : gender
+        }
+       
+        const user1 = {address,telNum, gender} // 위에꺼 축약버전
+        console.log(user)
+
+        const {a:x=0,b:y=0,c:z} = {a:1, b:2, c:3}
+
+        console.log(x) // 1 / 초기값이 있지만 1이라는 값을 가짐
+        console.log(y) // 2
+        console.log(z) // 3 
+
+        // const {a:x=0,b:y=0,c:z} = {a:1, b:2, c} // 이렇게 하면 c는 키값만 있고 value 값이 없어서 성립되지 않음.
+        // const {a:x=0,b:y=0,c:z=0} = {a:1, b:2, c} // 초기값을 먼저 설정을 해두면 성립이 됨
+
+
+       function objFnc (name, age){
+           console.log(name)
+           console.log(age)
+           //return 생략함
+       }
+       const obj = {name : 'won' , age : 10}
+       
+       //objFnc(obj.name, obj.age)
+       objFnc(obj) // name 과 age 값이 나오고나서 return 값이 없으므로 undefined가 나옴
+       // {name:name , age:age} = {name:'won', age: 10}
+
+    </script>
+    
+</body>
+</html>
